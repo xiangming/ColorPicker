@@ -1,0 +1,169 @@
+/*
+* CSS Template v0.1
+* Copyright 2013, Jason Xiang
+* www.xiguabaobao.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 2013-8-19
+*/
+
+
+/* Table of Content
+==================================================
+	#Reset & Basics
+	#Basic Styles
+	#Site Styles
+	#Typography
+	#Links
+	#Lists
+	#Images
+	#Buttons
+	#Forms
+	#Misc 
+    #Media Queries */
+
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline; }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        display: block; }
+    body {
+        line-height: 1; }
+    ol, ul {
+        list-style: none; }
+    blockquote, q {
+        quotes: none; }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none; }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0; }
+
+
+/* #Basic Styles
+================================================== */
+    body {
+        background: #EFEFEF;
+        /*font: 14px/21px Helvetica, Arial, sans-serif;*/
+        font: normal 16px/1.5 Helvetica, "Microsoft Yahei", Arial, sans-serif;
+        color: #444;
+        -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+        -webkit-text-size-adjust: 100%;
+    }
+    .container {max-width: 100%; margin: 0 auto;padding: 1%;}
+    .container header {text-align: center;}
+    .container section {margin-top: 20px;}
+    .top-bar {font-size:11px;text-align:center;text-transform:uppercase;position:static;line-height: 24px;background: #ffffff;box-shadow: 1px 0 2px rgba(0,0,0,0.2);}
+    .top-bar a {padding:0 10px;display:inline-block;letter-spacing:1px;}
+    .support-note span{
+        color: #ac375d;
+        font-size: 16px;
+        display: none;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 0;
+    }
+    .no-cssanimations .support-note span.no-cssanimations,
+    .no-csstransforms .support-note span.no-csstransforms,
+    .no-csstransforms3d .support-note span.no-csstransforms3d,
+    .no-csstransitions .support-note span.no-csstransitions{
+        display: block;
+    }
+    
+
+/* #Site Styles
+================================================== */
+    section ul {width: 46%; float: left; margin: 0 1% 1%;background-color: #DDDDDD;padding: 1%;border-radius:5px;}
+    section li {width: 60px;}
+    section span {display: block;clear: both;}
+    input {border-radius:100%; width: 100%; height:60px; border: 0; outline: 0; text-align: center; color: #ffffff; font-size: 10px; cursor: pointer; display: block;position: relative; top: 0;}
+    input:hover {position:relative; top: -5px;}
+    *, *:after, *:before {
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+
+
+/* #Typography
+================================================== */
+    h1, h2, h3, h4, h5, h6 { color: #181818;}
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+    h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
+    h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; }
+    h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; }
+    h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; }
+    h5 { font-size: 17px; line-height: 24px; }
+    h6 { font-size: 14px; line-height: 21px; }
+    .subheader { color: #777; }
+
+    em { font-style: italic; }
+    strong { font-weight: bold; color: #333; }
+    small { font-size: 80%; }
+
+    hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
+
+
+/* #Links
+================================================== */
+    a, a:visited { color: #333; text-decoration: none; outline: 0; }
+    a:hover, a:focus { color: #000; text-decoration: underline;}
+
+
+/* #Lists
+================================================== */
+    li { display: block; float: left;}
+
+
+/* #Images
+================================================== */
+    img { 
+        max-width: 100%;
+        height: auto; 
+        width: auto\9; /*ie8*/
+    }
+
+
+/* #Buttons
+================================================== */
+
+
+/* #Forms
+================================================== */
+
+
+/* #Misc
+================================================== */
+    .clearfix {clear: both !important;}
+    .centered {text-align: center !important;}
+    .left {float: left !important;}
+    .right {float: right !important;}
+
+
+/* #Media Queries
+================================================== */
+
+    /* Smaller than standard 960 (devices and browsers) */
+    @media only screen and (max-width: 959px) {}
+
+    /* Tablet Portrait size to standard 960 (devices and browsers) */
+    @media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+    /* All Mobile Sizes (devices and browser) */
+    @media only screen and (max-width: 767px) {section ul {float: none; width: 96%; margin-left:0px;}}
+
+    /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+    @media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+    /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+    @media only screen and (max-width: 479px) {}
