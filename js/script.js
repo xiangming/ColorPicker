@@ -62,25 +62,36 @@
 
 /* #Page Scripts
 ==================================================*/
+	//为li插入input元素并着色
     function colorElem(){
         var li = document.getElementsByTagName('li');
-        for(var i = 0; i < li.length; i++) {
+        for(var i = 16; i < li.length; i++) {
             var color = li[i].getAttribute('color').toUpperCase();
             li[i].innerHTML = "<input type='text' style='background-color: " + color + ";'/>";
         }
     }
+    //为input添加事件
     function showCode(){
         var input = document.getElementsByTagName('input');
-        for(var i = 0; i < input.length; i++) {
+        for(var i = 16; i < input.length; i++) {
             input[i].onclick = function() {
                 var elem = this;
-                var color = this.parentNode.getAttribute('color').toUpperCase();
+                var color = elem.parentNode.getAttribute('color').toUpperCase();
                 elem.setAttribute('value',color);
                 elem.focus();
                 elem.select();
-                setTimeout(function(){resetElem(elem)},4000);
+            }
+            input[i].onblur = function() {
+            	var elem = this;//this不能直接传参
+            	setTimeout(function(){resetElem(elem)},2000);
             }
         }
+        for (var i = 0; i < 16; i++) {//前16个li特殊处理
+        	input[i].onclick = function() {
+        		this.focus();
+        		this.select();
+        	}
+        };
     }
     addLoadEvent(colorElem);
     addLoadEvent(showCode);
