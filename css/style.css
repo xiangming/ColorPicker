@@ -59,9 +59,10 @@
         -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
         -webkit-text-size-adjust: 100%;
     }
+    input {padding: 10px 15px;outline: 0;border:0;border-radius: 3px;width: 200px;}
     .container {max-width: 100%; margin: 0 auto;padding: 1%;}
     .container header {text-align: center;}
-    .container section {margin-top: 20px;}
+    .container header a{text-decoration:none;}
     .top-bar {font-size:11px;text-align:center;text-transform:uppercase;position:static;line-height: 24px;background: #ffffff;box-shadow: 1px 0 2px rgba(0,0,0,0.2);}
     .top-bar a {padding:0 10px;display:inline-block;letter-spacing:1px;}
     .support-note span{
@@ -82,11 +83,13 @@
 
 /* #Site Styles
 ================================================== */
-    section ul {width: 46%; float: left; margin: 0 1% 1%;background-color: #DDDDDD;padding: 1%;border-radius:5px;}
+    section#colorpicker{background-color: #DDDDDD; border-radius: 5px; margin: 0 1%; height: 150px; line-height: 150px; text-align:center;}
+    section.main{margin-top: 20px;}
+    section ul {width: 46%; float: left; margin:0 1% 1%;background-color: #DDDDDD;padding: 1%;border-radius:5px;}
     section ul.x2{width: 96%;}
     section ul li {width: 60px;}
-    section ul span {display: block;clear: both;}
-    section ul li input {border-radius:100%; width: 100%; height:60px; border: 0; outline: 0; text-align: center; color: #ffffff; font-size: 10px; cursor: pointer; display: block;position: relative; top: 0;}
+    section ul span {display: block;clear: both;font-size: 10px;}
+    section ul li input {padding: 0; border-radius:10px; width: 100%; height:60px; text-align: center; color: #ffffff; font-size: 10px; cursor: pointer;display: block;position: relative; top: 0;}
     section ul li input:hover {position:relative; top: -5px;}
     *, *:after, *:before {
         -webkit-transition: all 0.2s ease-out;
@@ -117,7 +120,7 @@
 
 /* #Links
 ================================================== */
-    a, a:visited { color: #333; text-decoration: none; outline: 0; }
+    a, a:visited { color: #377D6A; text-decoration: none; outline: 0; }
     a:hover, a:focus { text-decoration: underline;}
 
 
@@ -161,7 +164,10 @@
     @media only screen and (min-width: 768px) and (max-width: 959px) {}
 
     /* All Mobile Sizes (devices and browser) */
-    @media only screen and (max-width: 767px) {section ul {float: none; width: 96%; margin-left:0px;}}
+    @media only screen and (max-width: 767px) {
+        section ul {float: none; width: 98%; margin-left:0px;}
+        section ul.x2{width: 98%;}
+    }
 
     /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
     @media only screen and (min-width: 480px) and (max-width: 767px) {}

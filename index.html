@@ -32,7 +32,7 @@
 
     <div class="container">
         <header>
-            <h1>Color Picker</h1>
+            <h1><a href="#" id="toggle" title="点击打开取色器">Color Picker</a></h1>
             <h6 class="subheader">个人收集的一些颜色，直接点击色块查看16进制代码，使用Ctrl+C复制代码。</h6>
 
             <div class="support-note"><!-- let's check browser support with modernizr -->
@@ -43,37 +43,30 @@
 
         </header>
 
+        <section id="colorpicker">
+            <input type="text" id="hex" maxlength="7" placeholder="输入16进制颜色代码">
+        </section>
+
         <section class="main">
             <ul class="x2">
-                <li color="aqua"><input type="text" style="background-color: aqua;color:black;" value="aqua"></li>
-                <li color="black"><input type="text" style="background-color: black;" value="black"></li>
-                <li color="blue"><input type="text" style="background-color: blue;" value="blue"></li>
-                <li color="fuchsia"><input type="text" style="background-color: fuchsia;" value="fuchsia"></li>
-                <li color="gray"><input type="text" style="background-color: gray;" value="gray"></li>
-                <li color="green"><input type="text" style="background-color: green;" value="green"></li>
-                <li color="lime"><input type="text" style="background-color: lime;" value="lime"></li>
-                <li color="maroon"><input type="text" style="background-color: maroon;" value="maroon"></li>
-                <li color="navy"><input type="text" style="background-color: navy;" value="navy"></li>
-                <li color="olive"><input type="text" style="background-color: olive;" value="olive"></li>
-                <li color="purple"><input type="text" style="background-color: purple;" value="purple"></li>
-                <li color="red"><input type="text" style="background-color: red;" value="red"></li>
-                <li color="silver"><input type="text" style="background-color: silver;" value="silver"></li>
-                <li color="teal"><input type="text" style="background-color: teal;" value="teal"></li>
-                <li color="white"><input type="text" style="background-color: white;color:maroon;" value="white"></li>
-                <li color="yellow"><input type="text" style="background-color: yellow;color:teal;" value="yellow"></li>
+                <li color="aqua"><input type="text" style="background-color:aqua;color:maroon;" value="aqua"></li>
+                <li color="black"><input type="text" style="background-color:black;" value="black"></li>
+                <li color="blue"><input type="text" style="background-color:blue;" value="blue"></li>
+                <li color="fuchsia"><input type="text" style="background-color:fuchsia;" value="fuchsia"></li>
+                <li color="gray"><input type="text" style="background-color:gray;" value="gray"></li>
+                <li color="green"><input type="text" style="background-color:green;" value="green"></li>
+                <li color="lime"><input type="text" style="background-color:lime;" value="lime"></li>
+                <li color="maroon"><input type="text" style="background-color:maroon;" value="maroon"></li>
+                <li color="navy"><input type="text" style="background-color:navy;" value="navy"></li>
+                <li color="olive"><input type="text" style="background-color:olive;" value="olive"></li>
+                <li color="purple"><input type="text" style="background-color:purple;" value="purple"></li>
+                <li color="red"><input type="text" style="background-color:red;" value="red"></li>
+                <li color="silver"><input type="text" style="background-color:silver;" value="silver"></li>
+                <li color="teal"><input type="text" style="background-color:teal;" value="teal"></li>
+                <li color="white"><input type="text" style="background-color:white;color:maroon;" value="white"></li>
+                <li color="yellow"><input type="text" style="background-color:yellow;color:maroon;" value="yellow"></li>
 
                 <span>HTML 4.0 Standard</span>
-            </ul>
-            <ul>
-                <li color="red"></li>
-                <li color="orange"></li>
-                <li color="yellow"></li>
-                <li color="green"></li>
-                <li color="cyan"></li>
-                <li color="blue"></li>
-                <li color="purple"></li>
-
-                <span>Jason Xiang - <a href="#">Rainbow</a></span>
             </ul>
             <ul>
                 <li color="#032429"></li>
@@ -86,7 +79,7 @@
                 <li color="#134A46"></li>
                 <li color="#032429"></li>
 
-                <span>Michael Arestad - <a href="http://codepen.io/MichaelArestad/full/ohLIa">Text input love</a></span>
+                <span>By Michael Arestad - <a href="http://codepen.io/MichaelArestad/full/ohLIa">Text input love</a></span>
             </ul>
             <ul>
                 <li color="#000000"></li>
@@ -97,7 +90,7 @@
                 <li color="#818C7B"></li>
                 <li color="#939598"></li>
 
-                <span>Jason Xiang - <a href="#">Darkness</a></span>
+                <span>By Jason Xiang - <a href="#">Darkness</a></span>
             </ul>
             <ul>
                 <li color="#F23A46"></li>
@@ -105,7 +98,7 @@
                 <li color="#BDDFE2"></li>
                 <li color="#DBEDDF"></li>
                 <li color="#FFFFFF"></li>
-                <span>Jason Xiang - <a href="http://xiguabaobao.com">xiguabaobao.com</a></span>
+                <span>By Jason Xiang - <a href="http://xiguabaobao.com">xiguabaobao.com</a></span>
             </ul>
             <ul>
                 <li color="#52bad1"></li>
@@ -115,7 +108,7 @@
                 <li color="#ff9b85"></li>
                 <li color="#ffe5ba"></li>
                 <li color="#ffffff"></li>
-                <span>Rino Wenger - <a href="http://dribbble.com">Dribbble</a></span>
+                <span>By Rino Wenger - <a href="http://dribbble.com">Dribbble</a></span>
             </ul>
             <ul>
                 <li color="#009c8c"></li>
@@ -126,7 +119,7 @@
                 <li color="#f27b3a"></li>
                 <li color="#ffd969"></li>
                 <li color="#fff587"></li>
-                <span>Rino Wenger - <a href="http://dribbble.com">Dribbble</a></span>
+                <span>By Rino Wenger - <a href="http://dribbble.com">Dribbble</a></span>
             </ul>
             <ul>
                 <li color="#0c6667"></li>
@@ -136,7 +129,7 @@
                 <li color="#566956"></li>
                 <li color="#3f3d31"></li>
                 <li color="#f15b43"></li>
-                <span>Rich Scott - <a href="http://dribbble.com">Dribbble</a></span>
+                <span>By Rich Scott - <a href="http://dribbble.com">Dribbble</a></span>
             </ul>
             <ul>
                 <li color="#939598"></li>
@@ -147,7 +140,7 @@
                 <li color="#b16067"></li>
                 <li color="#8d9f6a"></li>
                 <li color="#687b36"></li>
-                <span>Shaun Cuf - <a href="http://dribbble.com">Dribbble</a></span>
+                <span>By Shaun Cuf - <a href="http://dribbble.com">Dribbble</a></span>
             </ul>
             <ul>
                 <li color="#fff9bc"></li>
@@ -156,7 +149,7 @@
                 <li color="#d92123"></li>
                 <li color="#650e04"></li>
 
-                <!-- <span>haluk <a href="#">COLOURlovers</a></span> -->
+                <span>By Haluk <a href="#">COLOURlovers</a></span>
             </ul>
             <ul>
                 <li color="#ddc997"></li>
@@ -165,7 +158,7 @@
                 <li color="#b75c4a"></li>
                 <li color="#7a3941"></li>
 
-                <!-- <span>by CoolBlue71 - <a href="#">COLOURlovers</a></span> -->
+                <span>By CoolBlue71 - <a href="#">COLOURlovers</a></span>
             </ul>
             <ul>
                 <li color="#594f4f"></li>
@@ -174,7 +167,7 @@
                 <li color="#9de0ad"></li>
                 <li color="#e5fcc2"></li>
 
-                <span><a href=""></a></span>
+                <span>By Alpen - <a href="">COLOURlovers</a></span>
             </ul>
             <ul>
                 <li color="#a79c8e"></li>
@@ -183,7 +176,7 @@
                 <li color="#eb9f9f"></li>
                 <li color="#6b5344"></li>
 
-                <span><a href=""></a></span>
+                <span>By Skyblue2u - <a href="">COLOURlovers</a></span>
             </ul>
             <ul>
                 <li color="#655643"></li>
@@ -192,16 +185,7 @@
                 <li color="#e6ac27"></li>
                 <li color="#bf4d28"></li>
 
-                <span><a href=""></a></span>
-            </ul>
-            <ul>
-                <li color="#1f2126"></li>
-                <li color="#192640"></li>
-                <li color="#386273"></li>
-                <li color="#818c7b"></li>
-                <li color="#bbbf99"></li>
-
-                <span><a href=""></a></span>
+                <span>By Joy_of_summer - <a href="">COLOURlovers</a></span>
             </ul>
             <ul>
                 <li color="#cbc8cc"></li>
@@ -211,7 +195,7 @@
                 <li color="#eea667"></li>
                 <li color="#fadc85"></li>
 
-                <span><a href=""></a></span>
+                <span>By Produed Hues - <a href="">design-seeds.com</a></span>
             </ul>
             <ul>
                 <li color="#f1f4d9"></li>
@@ -221,7 +205,7 @@
                 <li color="#a80118"></li>
                 <li color="#f61e37"></li>
 
-                <span><a href=""></a></span>
+                <span>By Peppered Palette - <a href="">design-seeds.com</a></span>
             </ul>
             <ul>
                 <li color="#e9ecea"></li>
@@ -231,16 +215,7 @@
                 <li color="#27222a"></li>
                 <li color="#515d70"></li>
 
-                <span><a href=""></a></span>
-            </ul>
-            <ul>
-                <li color="#000000"></li>
-                <li color="#ffffff"></li>
-                <li color="#ed2224"></li>
-                <li color="#6abd45"></li>
-                <li color="#3a53a5"></li>
-
-                <span><a href=""></a></span>
+                <span>By Polar Blues - <a href="">design-seeds.com</a></span>
             </ul>
             <ul>
                 <li color=""></li>
@@ -259,7 +234,6 @@
     </div>
     
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
     <!-- script for google analytics -->
     <script>

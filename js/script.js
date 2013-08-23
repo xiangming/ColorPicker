@@ -54,6 +54,19 @@
 			element.className = newClassName;
 		}
 	}
+    //给js增加类似jQuery的选择器$
+    //参数s：类似jQuery的选择匹配符#.*
+    function $(s){
+        if (s.indexOf('#') != -1) {
+            s = s.replace('#','');
+            return document.getElementById(s);//id选择器
+        };
+        if (s.indexOf('.') != -1) {
+            s = s.replace('.','');
+            return document.getElementsByClassName(s);//class选择器
+        };
+        return document.getElementsByTagName(s);//tag选择器和*选择器
+    }
 
 
 /* #Site Scripts
@@ -64,7 +77,7 @@
 ==================================================*/
 	//为li插入input元素并着色
     function colorElem(){
-        var li = document.getElementsByTagName('li');
+        var li = $('li');
         for(var i = 16; i < li.length; i++) {
             var color = li[i].getAttribute('color').toUpperCase();
             li[i].innerHTML = "<input type='text' style='background-color: " + color + ";'/>";
@@ -72,8 +85,8 @@
     }
     //为input添加事件
     function showCode(){
-        var input = document.getElementsByTagName('input');
-        for(var i = 16; i < input.length; i++) {
+        var input = $('input');
+        for(var i = 17; i < input.length; i++) {
             input[i].onclick = function() {
                 var elem = this;
                 var color = elem.parentNode.getAttribute('color').toUpperCase();
@@ -86,7 +99,7 @@
             	setTimeout(function(){resetElem(elem)},2000);
             }
         }
-        for (var i = 0; i < 16; i++) {//前16个li特殊处理
+        for (var i = 1; i < 17; i++) {//HTML4的16个li特殊处理
         	input[i].onclick = function() {
         		this.focus();
         		this.select();
@@ -95,7 +108,69 @@
     }
     addLoadEvent(colorElem);
     addLoadEvent(showCode);
+    //清空元素上的内容
     function resetElem(elem){
         elem.setAttribute('value','');
         elem.blur();
+    }
+
+    //color picker主函数
+    function colorPicker() {
+        var toggle = $('#toggle');
+    	var cp = $('#colorpicker');
+        
+        slideUp(cp);
+
+        toggle.onclick = function() {
+            if (cp.style.display == 'none') {
+                slideDown(cp);
+            }else{
+                slideUp(cp);
+            }
+        }
+        //取色器
+        var hex = $('#hex');
+    	hex.onkeyup = function() {
+    		setTimeout(function() {
+                var data = hex.value;
+                
+                if (data.indexOf('#') != -1) data = data.replace('#','');//如果有，就去掉#
+
+                if (data.length == 0) hex.parentNode.style.backgroundColor = '#DDD';
+                if (data.length == 1) data = data + data + data + data + data + data;
+                if (data.length == 2) data = data + data + data;
+
+                data = '#' + data;
+                hex.parentNode.style.backgroundColor = data;
+            }, 10)	
+    	}
+    }
+    addLoadEvent(colorPicker);
+
+    function slideDown(e) {
+        var h = e.offsetHeight;
+        var t = setInterval(function(){
+            h++;
+            if (h >= 150) {
+                e.style.height = '150px';
+                clearInterval(t);
+            }else{
+                e.style.display = 'block';
+                e.style.height = h + 'px';
+            }
+        },1);
+    }
+    function slideUp(e) {
+        var h = e.offsetHeight;
+        var t = setInterval(function(){
+            h--;
+            if (h <= -20) {
+                e.style.display = 'none';
+                clearInterval(t);
+            }else if (h < 0 && h > -20) {
+                e.style.height = '0px';//IE兼容
+            }else{
+                e.style.height = h + 'px';
+            }  
+        },1);    
     }
