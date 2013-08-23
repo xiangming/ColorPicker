@@ -1,17 +1,16 @@
 We Love Colors
 ==========
-I spend much time on sites like dribbble. There is always a lot of pleasing colors inspired me. I couldn't control myself and I love them. So, I picked them up.
+I spend much time on sites like dribbble. There is always a lot of pleasing colors inspired me. I love them.
+
+WeLoveColors is a color picker tool developed with HTML、CSS、JavaScript and no jQuery or other libs.
 
 Demo
 ----
-http://xiguabaobao.com/demo/
+http://xiguabaobao.com/demo/Colors
 
-Usage(使用方法)
+Usage
 -----
-Add steps here!!!
-``` html
-some code here
-```
+Just click the index.html
 
 Author
 ------
