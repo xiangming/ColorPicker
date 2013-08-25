@@ -150,7 +150,7 @@
     function slideDown(e) {
         var h = e.offsetHeight;
         var t = setInterval(function(){
-            h++;
+            h += 2;
             if (h >= 150) {
                 e.style.height = '150px';
                 clearInterval(t);
@@ -158,12 +158,12 @@
                 e.style.display = 'block';
                 e.style.height = h + 'px';
             }
-        },1);
+        },10);
     }
     function slideUp(e) {
         var h = e.offsetHeight;
         var t = setInterval(function(){
-            h--;
+            h -= 2;
             if (h <= -20) {
                 e.style.display = 'none';
                 clearInterval(t);
@@ -172,5 +172,5 @@
             }else{
                 e.style.height = h + 'px';
             }  
-        },1);    
+        },10);    
     }

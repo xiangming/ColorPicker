@@ -6,7 +6,7 @@ WeLoveColors is a color picker tool developed with HTML、CSS、JavaScript and n
 
 Demo
 ----
-http://xiguabaobao.com/demo/Colors
+http://xiguabaobao.com/demo/ColorPicker
 
 Usage
 -----
