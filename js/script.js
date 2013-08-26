@@ -78,6 +78,7 @@
 	//为li插入input元素并着色
     function colorElem(){
         var li = $('li');
+        if (li.length == 0) return false;
         for(var i = 16; i < li.length; i++) {
             var color = li[i].getAttribute('color').toUpperCase();
             li[i].innerHTML = "<input type='text' style='background-color: " + color + ";'/>";
@@ -86,6 +87,7 @@
     //为input添加事件
     function showCode(){
         var input = $('input');
+        if (input.length == 0) return false;
         for(var i = 17; i < input.length; i++) {
             input[i].onclick = function() {
                 var elem = this;
@@ -114,12 +116,13 @@
         elem.blur();
     }
 
-    //color picker主函数
+    //ColorPicker主函数
     function colorPicker() {
         var toggle = $('#toggle');
     	var cp = $('#colorpicker');
-        
-        slideUp(cp);
+        if (!toggle || !cp) return false;
+
+        slideUp(cp);//slideUp when page loaded
 
         toggle.onclick = function() {
             if (cp.style.display == 'none') {
@@ -130,6 +133,7 @@
         }
         //取色器
         var hex = $('#hex');
+        var colorArray = ['aqua','black','blue','fuchsia','gray','green','lime','maroon','navy','olive','purple','red','silver','teal','white','yellow'];
     	hex.onkeyup = function() {
     		setTimeout(function() {
                 var data = hex.value;
@@ -139,8 +143,9 @@
                 if (data.length == 0) hex.parentNode.style.backgroundColor = '#DDD';
                 if (data.length == 1) data = data + data + data + data + data + data;
                 if (data.length == 2) data = data + data + data;
-
-                data = '#' + data;
+ 
+                if (colorArray.indexOf(data) == -1) data = '#' + data;
+                
                 hex.parentNode.style.backgroundColor = data;
             }, 10)	
     	}
