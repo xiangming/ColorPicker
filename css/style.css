@@ -4,22 +4,22 @@
 * www.xiguabaobao.com
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
-* 2013-8-19
+* 2013-9-9
 */
 
 
 /* Table of Content
 ==================================================
-	#Reset & Basics
-	#Basic Styles
-	#Site Styles
-	#Typography
-	#Links
-	#Lists
-	#Images
-	#Buttons
-	#Forms
-	#Misc 
+    #Reset & Basics
+    #Typography
+    #Links
+    #Lists
+    #Images
+    #Buttons
+    #Forms
+    #Misc 
+    #Basic Styles
+    #Site Styles
     #Media Queries */
 
 
@@ -49,57 +49,6 @@
         border-spacing: 0; }
 
 
-/* #Basic Styles
-================================================== */
-    body {
-        background: #EFEFEF;
-        /*font: 14px/21px Helvetica, Arial, sans-serif;*/
-        font: normal 16px/1.5 Helvetica, "Microsoft Yahei", Arial, sans-serif;
-        color: #444;
-        -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-        -webkit-text-size-adjust: 100%;
-    }
-    input {padding: 10px 15px;outline: 0;border:0;width: 200px;}
-    .container {max-width: 100%; margin: 0 auto;padding: 1%;}
-    .container header {text-align: center;}
-    .container header a{text-decoration:none;}
-    .top-bar {font-size:11px;text-align:center;text-transform:uppercase;position:static;line-height: 24px;background: #ffffff;box-shadow: 1px 0 2px rgba(0,0,0,0.2);}
-    .top-bar a {padding:0 10px;display:inline-block;letter-spacing:1px;}
-    .support-note span{
-        color: #ac375d;
-        font-size: 16px;
-        display: none;
-        font-weight: bold;
-        text-align: center;
-        padding: 5px 0;
-    }
-    .no-cssanimations .support-note span.no-cssanimations,
-    .no-csstransforms .support-note span.no-csstransforms,
-    .no-csstransforms3d .support-note span.no-csstransforms3d,
-    .no-csstransitions .support-note span.no-csstransitions{
-        display: block;
-    }
-    
-
-/* #Site Styles
-================================================== */
-    section#colorpicker{background-color: #DDDDDD; border-radius: 5px; margin: 0 1%; height: 150px; line-height: 150px; text-align:center;}
-    section#colorpicker input{border-radius: 3px;}
-    section.main{margin-top: 20px;}
-    section ul {width: 46%; float: left; margin:0 1% 1%;background-color: #DDDDDD;padding: 1%;border-radius:5px;}
-    section ul.x2{width: 96%;}
-    section ul li {width: 60px;}
-    section ul span {display: block;clear: both;font-size: 10px;}
-    section ul li input {padding: 0; width: 100%; height:60px; text-align: center; color: #ffffff; font-size: 10px; cursor: pointer;display: block;position: relative; top: 0;}
-    section ul li input:hover {position:relative; top: -5px;}
-    *, *:after, *:before {
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        -o-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out;
-    }
-
-
 /* #Typography
 ================================================== */
     h1, h2, h3, h4, h5, h6 { color: #181818;}
@@ -121,8 +70,8 @@
 
 /* #Links
 ================================================== */
-    a, a:visited { color: #377D6A; text-decoration: none; outline: 0; }
-    a:hover, a:focus { text-decoration: underline;}
+    a, a:visited { color: #000; text-decoration: none; outline: 0; }
+    a:hover, a:focus { color: #333;}
 
 
 /* #Lists
@@ -133,8 +82,8 @@
 /* #Images
 ================================================== */
     img { 
-        max-width: 100%;
-        height: auto; 
+        width: 100%;
+        height: 100%; 
         width: auto\9; /*ie8*/
     }
 
@@ -155,6 +104,34 @@
     .right {float: right !important;}
 
 
+/* #Basic Styles
+================================================== */
+    body {
+        background:#34495E;
+        /*font:14px/21px Helvetica, Arial, sans-serif;*/
+        font:normal 14px/1.5 Helvetica, "Microsoft Yahei", Arial, sans-serif;
+        color:#444;
+        -webkit-font-smoothing:antialiased; /* Fix for webkit rendering */
+        -webkit-text-size-adjust:100%;
+    }
+    input {width:200px;padding:10px 15px;outline:0;border:0;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+    
+
+/* #Site Styles
+================================================== */
+    #header {position:fixed;top:0;right:0;left:0;line-height:24px;font-size:11px;text-align:center;text-transform:uppercase;background-color:rgba(255,255,255,0.5);
+        -webkit-box-shadow:1px 0 2px rgba(0,0,0,0.2);-moz-box-shadow:1px 0 2px rgba(0,0,0,0.2);-ms-box-shadow:1px 0 2px rgba(0,0,0,0.2);-o-box-shadow:1px 0 2px rgba(0,0,0,0.2);box-shadow:1px 0 2px rgba(0,0,0,0.2);}
+    #header a {padding:0 10px;display:inline-block;letter-spacing:1px;}
+    #content {width:100%;margin-top:40px;}
+    .container {width:960px;margin:0 auto;}
+    .container h1 {font-family:'Damion',cursive;color:white;}
+    .wrapper{width:100%;margin:20px 0;background-color:#2C3E50;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+    .wrapper li{width:100px;}
+    .wrapper li input{color:white;cursor:pointer;}
+    .wrapper span{line-height:40px;}
+    .wrapper span a{text-transform:uppercase;height:20px;line-height:20px;display:inline-block;text-align:center;padding:2px 4px;color:white;font-family:sans-serif;background:#777;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+
+
 /* #Media Queries
 ================================================== */
 
@@ -165,10 +142,7 @@
     @media only screen and (min-width: 768px) and (max-width: 959px) {}
 
     /* All Mobile Sizes (devices and browser) */
-    @media only screen and (max-width: 767px) {
-        section ul {float: none; width: 98%; margin-left:0px;}
-        section ul.x2{width: 98%;}
-    }
+    @media only screen and (max-width: 767px) {}
 
     /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
     @media only screen and (min-width: 480px) and (max-width: 767px) {}

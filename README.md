@@ -1,8 +1,8 @@
-We Love Colors
+ColorPicker
 ==========
-I spend much time on sites like dribbble. There is always a lot of pleasing colors inspired me. I love them.
+I spend much time on sites like dribbble. There are always a lot of pleasing colors inspired me. I love them.
 
-WeLoveColors is a color picker tool developed with HTML、CSS、JavaScript and no jQuery or other libs.
+ColorPicker is a color picker tool developed with HTML、CSS、JavaScript and no jQuery or other libs.
 
 Demo
 ----
@@ -10,11 +10,11 @@ http://xiguabaobao.com/demo/ColorPicker
 
 Usage
 -----
-Just click the index.html
+Just click the color, you'll get the Hex code.
 
 Author
 ------
-[Jason Xiang](http://github.com/webappsniper)
+[Jason Xiang](http://github.com/xiangming)
 
 + http://xiguabaobao.com
 
